@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="logout()">
+        logout
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-select
+          label="Idioma"
+          placeholder="Idioma"
+          (ionChange)="changeLanguage($event)"
+          [value]="currentLang">
+      <ion-select-option value="ca">Català</ion-select-option>
+      <ion-select-option value="en">English</ion-select-option>
+      <ion-select-option value="es">Español</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <h1>{{ "HELLOWORLD" | translate }}</h1>
+
+  <h1>{{ helloworld }}</h1>
+
+  <h2 [translate]="'APP.HOLIDAYS'"></h2>
+
+  <ul>
+    @for (vacanca of vacances; track $index) {
+      <li (click)="logVacanca(vacanca)">{{vacanca.nom}}</li>
+      <ion-icon (click)="updateVacanca(vacanca)" name="pencil-outline"></ion-icon>
+  }
+  </ul>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="addVacanca()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

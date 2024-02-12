@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "615577967112",
+    "project_id": "testcifo01",
+    "storage_bucket": "testcifo01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615577967112:android:a46fc15e3ba02670820fbd",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiqdy1d1Sfr-uYWa8Zv5fGAPvaIHHO8wc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
